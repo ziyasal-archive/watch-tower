@@ -1,0 +1,35 @@
+{
+  "monitor": {
+    "intervalCronExpr": "*/59 * * * * *",
+    "timeZone": "Europe/London"
+  },
+  "scrapers": {
+    "aws": {
+      "endpoint": "http://status.aws.amazon.com/"
+    },
+    "heroku": {
+      "endpoint": "http://status.heroku.com/"
+    }
+  },
+  "actionStrategies": {
+    "mail": {
+      "smtp": {
+        "service": "Gmail",
+        "auth": {
+          "user": "your-email-here",
+          "pass": "yoyr-pass-here"
+        },
+        "options": {
+          "from": "Service Monitor ✔",
+          "to": "to-email-here"
+        }
+      },
+      "waitingCache": {
+        "ttl": 180000
+      }
+    },
+    "restApi": {
+      "endpoint": "http://localhost:8080/notify"
+    }
+  }
+}

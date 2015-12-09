@@ -1,0 +1,43 @@
+{
+  "name": "watch-tower",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node bin/main.js",
+    "pm2-start": "node ./node_modules/pm2/bin/pm2 start bin/main.js --name watch-tower-app",
+    "pm2-start-api": "node ./node_modules/pm2/bin/pm2 start mock-api/api.js --name  watch-tower-mock-api",
+    "test": "mocha --check-leaks --reporter spec --bail tests/",
+    "jshint-lib": "node ./node_modules/jshint/bin/jshint lib/",
+    "jshint-tests": "node ./node_modules/jshint/bin/jshint tests/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks --reporter dot tests/"
+  },
+  "keywords": [
+    "aws",
+    "heroku",
+    "monitor",
+    "service"
+  ],
+  "author": "Ziya SARIKAYA @ziyasal <sarikayaziya@gmail.com> (http://ziyasal.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "istanbul": "^0.4.0",
+    "jshint": "^2.8.0",
+    "mocha": "^2.3.4",
+    "proxyquire": "^1.7.3",
+    "should": "^7.1.1",
+    "sinon": "^1.17.2"
+  },
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "cron": "^1.1.0",
+    "lodash": "^3.10.1",
+    "nconf": "^0.8.2",
+    "node-cache": "^3.0.0",
+    "nodemailer": "^1.10.0",
+    "pm2": "^0.15.10",
+    "request": "^2.67.0",
+    "request-promise": "^1.0.2",
+    "restify": "^4.0.3"
+  }
+}

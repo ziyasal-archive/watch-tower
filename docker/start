@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd /app
+npm install
+
+pm2 start -x bin/main.js --name="watch-tower-app" --no-daemon --watch
