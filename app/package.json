@@ -10,7 +10,8 @@
     "test": "mocha --check-leaks --reporter spec --bail tests/",
     "jshint-lib": "node ./node_modules/jshint/bin/jshint lib/",
     "jshint-tests": "node ./node_modules/jshint/bin/jshint tests/",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks --reporter dot tests/"
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks --reporter dot tests/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks --reporter spec tests/"
   },
   "keywords": [
     "aws",
