@@ -3,6 +3,8 @@ Watch-Tower
 
 > Coding4fun node.js application to monitor aws, heroku and trigger a simple REST-API call, send an email or perform similar notification actions
 
+[![Build Status](https://travis-ci.org/ziyasal/watch-tower.svg)](https://travis-ci.org/ziyasal/watch-tower)
+
 ##Requirements
 ###Node.js
 Tested with node.js `v5.1.0 Stable`.
