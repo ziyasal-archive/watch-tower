@@ -6,4 +6,4 @@ matrix:
     - node_js: "5.1.0"
   fast_finish: true
 script: "cd app && npm install && npm run-script test-travis"
-after_script: "cd app && npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls"
+after_script: "npm install coveralls@2.10.0 && cat ./app/coverage/lcov.info | coveralls"
