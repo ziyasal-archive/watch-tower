@@ -11,7 +11,7 @@
     "jshint-lib": "node ./node_modules/jshint/bin/jshint lib/",
     "jshint-tests": "node ./node_modules/jshint/bin/jshint tests/",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --check-leaks --reporter dot tests/",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --check-leaks --reporter spec tests/"
+    "test-travis": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "keywords": [
     "aws",
@@ -25,6 +25,7 @@
     "istanbul": "^0.4.0",
     "jshint": "^2.8.0",
     "mocha": "^2.3.4",
+    "mocha-lcov-reporter": "^1.0.0",
     "proxyquire": "^1.7.3",
     "should": "^7.1.1",
     "sinon": "^1.17.2"
