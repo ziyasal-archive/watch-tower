@@ -5,23 +5,15 @@ Watch-Tower
 
 [![Build Status](https://travis-ci.org/ziyasal/watch-tower.svg)](https://travis-ci.org/ziyasal/watch-tower) [![Coverage Status](https://coveralls.io/repos/ziyasal/watch-tower/badge.svg?branch=master&service=github)](https://coveralls.io/github/ziyasal/watch-tower?branch=master)
 
-##Requirements
-###Node.js
 Tested with node.js `v5.1.0 Stable`.
 mocha `2.3.4`
 
-##Usage
+## Usage
 
-###Install Dependencies
+**Install Dependencies**
 
-**On Windows**
 ```sh
 npm install
-```
-
-**On Linux**
-```sh
-sudo npm install
 ```
 
 ### Commands
